@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+
+  <title>SAL. Las recetas que buscabas</title>
+</head>
+<div id="preloader">
+  <h1 alt="logo" class="logo-preloader" id="logo">
+    SAL.<span>recetas</span>
+  </h1>
+  <small class="inicio">Haz click para ingresar</small>
+</div>
+
+<body>
+  <div id="contenido" class="hidden">
+    <header>
+      <a href="index.html">
+        <div class="logo">SAL.<span>recetas</span></div>
+      </a>
+      <nav class="navbar navbar-expand-lg d-none d-lg-flex">
+        <div class="container">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">
+                  Inicio
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Catálogo
+                </a>
+                <ul class="dropdown-menu rounded-1" style="background-color: var(--blanco)"
+                  aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="catalogo.html">Carne</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="catalogo.html">Pollo</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="catalogo.html">Pasta</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="catalogo.html">Vegetariano</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="restaurantes.html">Restaurantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- NAV MOVIL -->
+      <nav class="navbar navbar-expand fixed-bottom d-lg-none">
+        <div class="container justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item dropup">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-shrimp"></i>
+                Catálogo
+              </a>
+              <ul class="dropdown-menu rounded-1" style="background-color: var(--blanco)"
+                aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="catalogo.html">Carne</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="catalogo.html">Pollo</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="catalogo.html">Pasta</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="catalogo.html">Vegetariano</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">
+                <i class="fa-solid fa-blender"></i>
+                Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="restaurantes.html">
+                <i class="fa-solid fa-utensils"></i>
+                Restaurantes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">
+                <i class="fa-solid fa-envelope-open"></i>
+                Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="destacados-semana">
+        <h1 class="destactxt">Destacados de la semana</h1>
+
+        <div class="cont-destacados">
+          <article class="recetas">
+            <a href="recetas.html">
+              <div class="receta-imagen a" aria-label="Empanadas de carne"></div>
+              <div class="receta-info">
+                <p class="receta-categoria">Carne, Harina,</p>
+                <h3 class="receta-nombre">Empanadas</h3>
+              </div>
+            </a>
+          </article>
+          <article class="recetas">
+            <a href="recetas.html">
+              <div class="receta-imagen b" aria-label="Tacos Mexicanos"></div>
+              <div class="receta-info">
+                <p class="receta-categoria">Carne, Harina, Cultural</p>
+                <h3 class="receta-nombre">Tacos Mexicanos</h3>
+              </div>
+            </a>
+          </article>
+          <article class="recetas">
+            <a href="recetas.html">
+              <div class="receta-imagen c" aria-label="Hamburgesa de carne"></div>
+              <div class="receta-info">
+                <p class="receta-categoria">Carne, Harina, Rápido</p>
+                <h3 class="receta-nombre">Hamburguesa Casera</h3>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="subscript">
+        <h2>Suscríbete a nuestro boletín</h2>
+        <form class="subsc-form">
+          <input type="email" placeholder="Introduce tu correo electrónico" required />
+          <button type="submit" class="no-show">Suscribirse</button>
+          <button type="submit" class="mobile-butt">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </section>
+
+      <section class="bloque-ult">
+        <h1>Recetas recientes</h1>
+        <div class="bloque">
+          <article class="blo-recetas-h">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/hamburguesa.png" alt="Hamburguesa" />
+              <div class="receta-inf-rec">
+                <p class="receta-cat">Carne, Harina, Rápido</p>
+                <h3 class="receta-nom">Hamburguesa</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/fajitas.jpg" alt="Fajitas" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Pollo, Parrilla, Sano</p>
+                <h3 class="receta-nombre">Fajitas</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas a3">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/flan.jpg" alt="Flan" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Postre, Vainilla, Rápido</p>
+                <h3 class="receta-nombre">Flan de Vainilla</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/pizza.jpg" alt="Pizza" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Italia, Harina, Rápido</p>
+                <h3 class="receta-nombre">Pizza estilo italiana</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/guiso.jpeg" alt="Guiso" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Carne, Horno</p>
+                <h3 class="receta-nombre">Albondigas al horno</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas-coc">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/helado_coco.jpg" alt="helado coco" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Postre, Helado, Coco</p>
+                <h3 class="receta-nombre">Helado de Coco</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas a2">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/salmon.jpg" alt="salmon" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Pescado, Grillado,</p>
+                <h3 class="receta-nombre">Salmón Grillado</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/sopa.jpg" alt="Sopa" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Sopa, Vegetariano</p>
+                <h3 class="receta-nombre">Sopa de Verduras</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/ravioles.webp" alt="Ravioles" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Harina, Carne</p>
+                <h3 class="receta-nombre">Ravioles con Tuco</h3>
+              </div>
+            </a>
+          </article>
+          <article class="blo-recetas a1">
+            <a href="recetas.html">
+              <img class="receta-img" src="img/ratatouille.jpg" alt="Ratatouille" />
+              <div class="receta-inf-rec">
+                <p class="receta-categoria">Verduras, Vegetariano, Horno</p>
+                <h3 class="receta-nombre">Ratatouille</h3>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="presentacion">
+        <div class="pres-content">
+          <img src="img/chef.avif" alt="presentacion" />
+          <div class="pres-info">
+            <h2>Presentación</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptate rem eaque in voluptates.
+            </p>
+            <h3>Sobre Nosotros</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ftr-cont">
+      <a href="index.html">
+        <div class="logo">SAL.</div>
+      </a>
+      <section class="ftr-list">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </section>
+      <section class="ft-red">
+        <ul>
+          <li>
+            <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </li>
+          <li>
+            <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </section>
+      <div class="copy">Sal. - Recetas Copyright &copy;2024</div>
+    </footer>
+  </div>
+  <!-- bootstrap script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
