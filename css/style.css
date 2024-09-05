@@ -5,7 +5,6 @@
   --negro: #1c1c1c;
   --blanco: #dbdce4;
   --azulclaro: #54a4b3;
-  --bs-dropdown-link-hover-bg: red;
 }
 
 html {
@@ -254,7 +253,7 @@ main{
 .bloque {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 40%);
+  grid-template-rows: repeat(3, 33%);
   gap: 2px;
   padding-bottom: 20px;
   height: 42rem;
