@@ -1,0 +1,60 @@
+@import "mixins";
+
+header {
+  color: $blanco;
+  width: 100%;
+
+  .logo {
+    font-size: 160px;
+    font-weight: bold;
+    margin-left: 20px;
+
+    span {
+      font-size: 50px;
+    }
+  }
+
+  .navbar {
+    background-color: $negro;
+
+    .nav-link {
+      color: $blanco;
+
+      &:hover {
+        color: $azulclaro;
+        transform: left 5px;
+      }
+
+      &.active,
+      &.show {
+        color: $azulclaro;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .dropdown-item:focus,
+  .dropdown-item:hover {
+    color: $blanco;
+    background-color: $azulclaro;
+  }
+}
+
+@media (max-width: 786px){
+    /* modificacion para el nav */
+    .nav-link {
+      @include flex-center;
+      flex-direction: column;
+    }
+    header{
+      .logo {
+        font-size: 128px;
+        span{
+          font-size: 38px;
+        }
+      }
+    }
+}

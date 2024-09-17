@@ -1,0 +1,641 @@
+@import "variables";
+@import "reset";
+@import "header";
+@import "footer";
+@import "mixins";
+@import "logo-pre";
+@import "globales";
+
+// Estilos general body
+body {
+    background-color: $negro;
+    font-family: $font-principal;
+    color: $negro;
+}
+
+.hidden {
+    display: none;
+}
+
+// Destacados semana
+.destacados-semana {
+    background-color: $blanco;
+
+    .cont-destacados {
+        @include flex-center;
+        padding-bottom: 1rem;
+
+        .recetas {
+            position: relative;
+            width: 350px;
+            height: 500px;
+            overflow: hidden;
+            margin: 3px;
+
+
+            .receta-imagen {
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+
+                &.a {
+                    background-image: url(../img/Empanadas.jpg);
+                    @include img-dest;
+                }
+
+                &.b {
+                    background-image: url(../img/mexicana.webp);
+                    @include img-dest;
+                }
+
+                &.c {
+                    background-image: url(../img/hamburguesa.png);
+                    @include img-dest;
+                }
+
+                &:hover {
+                    transform: scale(0.98);
+                }
+            }
+
+            .receta-info {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 4px;
+                width: 80%;
+                padding: 1rem;
+                text-align: center;
+
+                .receta-categoria {
+                    font-weight: 300;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+/* Estilos para la sección de suscripción */
+.subscript {
+    background-color: $grisazulado;
+    padding: 1.5rem;
+    text-align: center;
+    @include flex-center;
+
+    h2 {
+        color: $violeta;
+        padding-right: 1rem;
+    }
+}
+
+.subsc-form {
+    input[type="email"] {
+        padding: 10px;
+        border: 1px solid $blanco;
+        border-radius: 30px;
+        width: 350px;
+        font-size: 1rem;
+    }
+
+    button {
+        border: none;
+        border-radius: 30px;
+        background-color: $azulclaro;
+        color: $blanco;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 15px;
+        padding: 10px;
+        width: 150px;
+
+        &:hover {
+            background-color: $violeta;
+        }
+    }
+
+    .mobile-butt {
+        display: none;
+    }
+}
+
+/* Estilos para la sección de recetas recientes */
+.bloque-ult {
+    @include delimit;
+
+    h1 {
+        color: $blanco;
+    }
+
+    .bloque {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 33%);
+        gap: 2px;
+        padding-bottom: 20px;
+        height: 42rem;
+
+        .blo-recetas {
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .blo-recetas-h {
+            @include space-span;
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .blo-recetas-coc {
+            @include pos-recent;
+            @include space-span-reverse;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .receta-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .receta-inf-rec {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $blanco;
+        padding: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
+
+/* TEXTO PRESENTACION */
+.presentacion {
+    background-color: $azulclaro;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .pres-content {
+        @include flex-center;
+        border: 2px dotted $negro;
+        border-radius: 4px;
+        padding: 10px;
+
+        img {
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .pres-info {
+            text-align: center;
+            padding: 10px;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+/* ------------------- NOSOTROS -------------- */
+.vision {
+    max-width: 70rem;
+    margin: 0 auto;
+    color: $blanco;
+    background-color: $azulclaro;
+
+    .vision-img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    p {
+        font-size: 27px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+/* COLABORADORES BLOQUE */
+.bloque-colab {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h1 {
+        color: $blanco;
+    }
+
+    .colaborador-c {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .colaborador,
+    .colaborador-c {
+        @include flex-center;
+        @include borde-dot;
+        padding: 2rem;
+        margin-bottom: 10px;
+
+        .colab-img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .colab-contenido {
+            color: $blanco;
+        }
+    }
+}
+
+/* -----------Edit HTML RESTAURANTES------------- */
+.resto-recome-cont {
+    background-color: $blanco;
+
+    .carousel-item {
+        height: 500px;
+
+        img {
+            @include img-fit;
+        }
+
+        .carousel-descrip {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $blanco;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            width: 30%;
+            text-align: center;
+            border: 2px dotted;
+        }
+    }
+}
+
+/* Resto visita */
+.resto-recome-mp {
+    h1 {
+        color: $blanco;
+    }
+
+    iframe {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+/* ESTILOS FORM CONTACTOS */
+.contact-cont {
+    background-color: $blanco;
+    padding-bottom: 2rem;
+
+    .form-content {
+        display: flex;
+        justify-content: center;
+
+        .form-img {
+            width: 40%;
+            object-fit: cover;
+            border-radius: 4px 0px 0px 4px;
+        }
+
+        .contact {
+            width: 40%;
+            padding: 50px;
+            background-color: $negro;
+            border-radius: 0px 4px 4px 0px;
+
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                resize: none;
+            }
+
+            input {
+                width: 100%;
+
+                &[type="submit"] {
+                    font-size: 20px;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    width: 35%;
+                    transition: transform 0.5s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        background-color: $azulclaro;
+                        color: $blanco;
+                    }
+                }
+            }
+
+            input:focus,
+            textarea:focus {
+                border: 2px solid $azulclaro;
+                outline: none;
+            }
+
+            label {
+                font-size: 25px;
+                color: $blanco;
+            }
+        }
+    }
+
+}
+
+/* ----------- DISEÑO DE RECETA ------------------ */
+.receta-completa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: $blanco;
+    border-radius: 4px;
+
+    .rece-img {
+        @include img-fit;
+        margin-right: 20px;
+        padding-right: 20px;
+        border-radius: 4px;
+    }
+
+    .receta-ingreso {
+        margin: 2rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* DESTACADOS */
+    .destacados-semana {
+        .cont-destacados {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+
+            .recetas {
+                width: 100%;
+                height: 15rem;
+            }
+        }
+    }
+
+    /* SUSCRIPCION */
+    .subscript {
+        flex-direction: column;
+
+        .subsc-form {
+            display: flex;
+
+            .subsc-form input[type="email"] {
+                width: 25rem;
+            }
+
+            .mobile-butt {
+                display: block;
+            }
+
+            button {
+                width: 50px;
+
+                &.no-show {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* responsive recientes */
+    .bloque-ult {
+        .bloque {
+            grid-template-columns: repeat(3, 1fr);
+
+            .blo-recetas.a1,
+            .blo-recetas.a2,
+            .blo-recetas.a3 {
+                display: none;
+            }
+        }
+    }
+
+    // -------- PRESENTACION ------- 
+    .pres-content {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        img {
+            width: 80%;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    /* NOSOTROS tablet */
+    .vision {
+        p {
+            font-size: 23px;
+        }
+
+        .vision-img {
+            display: none;
+        }
+    }
+
+    // COLABORACIONES 
+    .bloque-colab {
+
+        .colaborador,
+        .colaborador-c {
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /* restaurante map */
+    .resto-recome-mp {
+        iframe {
+            height: 400px;
+            padding: 0;
+        }
+    }
+
+    .resto-recome-cont {
+        .carousel-item {
+            .carousel-descrip {
+                width: 60%;
+            }
+        }
+
+    }
+
+    /* formulario de contacto */
+    .contact-cont {
+        .form-content {
+            .form-img {
+                width: 20%;
+            }
+
+            .contact {
+                width: 60%;
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    /* RECETA */
+    .receta-completa {
+        @include flex-center;
+        max-width: 80%;
+        flex-direction: column;
+
+        .rece-img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    /* suscripcion */
+    .subsc-form input[type="email"] {
+        width: 18rem;
+    }
+
+    .pres-content {
+        img {
+            display: none;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+
+    /* recetas recientes  */
+    .bloque-ult {
+        .bloque {
+            grid-template-columns: repeat(2, 1fr);
+
+            .blo-recetas-h,
+            .blo-recetas-coc {
+                display: none;
+            }
+
+            .blo-recetas.a1 {
+                display: block;
+            }
+        }
+    }
+
+    /* NOSOTROS */
+
+    .vision {
+        p {
+            font-size: 18px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .bloque-colab {
+
+        .colaborador,
+        .colaborador-c {
+            flex-direction: column;
+
+            .colab-img {
+                width: 90%;
+                margin: 0;
+            }
+        }
+    }
+
+    /* restaurantes movil */
+    .mapsg {
+        iframe {
+            height: 300px;
+            padding-bottom: 1rem;
+        }
+    }
+
+    // CONTACTOS
+    .contact-cont {
+        .form-content {
+            .form-img {
+                display: none;
+            }
+
+            .contact {
+                border-radius: 4px;
+                width: 100%;
+            }
+        }
+    }
+
+    /* RECETA */
+    .receta-completa {
+        flex-direction: column;
+
+        .rece-img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

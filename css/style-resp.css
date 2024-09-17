@@ -5,7 +5,7 @@
   --negro: #1c1c1c;
   --blanco: #dbdce4;
   --azulclaro: #54a4b3;
-  --font-os: "Oswald", sans-serif;
+  --font-principal: "Oswald", sans-serif;
 }
 
 *,
@@ -18,12 +18,12 @@
 
 body {
   background-color: var(--negro);
-  font-family: var(--font-os);
+  font-family: var(--font-principal);
   color: var(--negro);
 }
 
 /* carga principal web */
-#preloader {
+.preloader {
   display: flex;
   justify-content: center;
   align-items: center;

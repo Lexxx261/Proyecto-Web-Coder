@@ -1,0 +1,52 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin img-dest {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+// mixin de recientes
+// limitar width
+@mixin delimit {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+@mixin space-span {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+@mixin space-span-reverse {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+@mixin pos-recent {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+@mixin hover-rec {
+  &:hover .receta-inf-rec {
+    opacity: 1;
+  }
+}
+
+@mixin borde-dot {
+  border: 2px dotted $blanco;
+  border-radius: 4px;
+}
+
+@mixin img-fit {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

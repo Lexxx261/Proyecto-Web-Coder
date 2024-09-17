@@ -1,0 +1,57 @@
+.preloader {
+  @include flex-center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $blanco;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  cursor: pointer;
+
+  .logo-preloader {
+    color: $negro;
+    font-size: 200px;
+    font-weight: bold;
+    opacity: 0.1;
+    transition: opacity 1s ease-in, transform 1s ease-in;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
+
+}
+
+.inicio {
+  color: $grisazulado;
+}
+
+@media (max-width: 768px) {
+
+  /* prelogo */
+  .preloader {
+    h1 {
+      font-size: 25px;
+    }
+
+    .logo-preloader {
+      font-size: 90px;
+
+      span {
+        font-size: 43px;
+      }
+    }
+  }
+}
+
+/* RESPONSIVE PARA CEL */
+@media (max-width: 480px) {
+  .preloader {
+    .logo-preloader {
+      font-size: 60px;
+    }
+  }
+}
