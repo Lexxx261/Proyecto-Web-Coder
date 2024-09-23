@@ -11,15 +11,18 @@
   cursor: pointer;
 
   .logo-preloader {
-    color: $negro;
     font-size: 200px;
     font-weight: bold;
     opacity: 0.1;
-    transition: opacity 1s ease-in, transform 1s ease-in;
+    animation: fadeIn 2s ease-in-out forwards;
 
-    &:hover {
-      opacity: 1;
-      transform: scale(1.02);
+    @keyframes fadeIn {
+      from {
+        opacity: 0.1;
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
 

@@ -8,7 +8,7 @@
 }
 
 header {
-  color: #dbdce4;
+  color: #f4fbff;
   width: 100%;
 }
 header .logo {
@@ -23,7 +23,7 @@ header .navbar {
   background-color: #1c1c1c;
 }
 header .navbar .nav-link {
-  color: #dbdce4;
+  color: #f4fbff;
 }
 header .navbar .nav-link:hover {
   color: #54a4b3;
@@ -37,7 +37,7 @@ header .navbar .nav-link i {
 }
 header .dropdown-item:focus,
 header .dropdown-item:hover {
-  color: #dbdce4;
+  color: #f4fbff;
   background-color: #54a4b3;
 }
 
@@ -60,7 +60,7 @@ header .dropdown-item:hover {
 .ftr-cont {
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -4px 6px -2px rgba(255, 255, 255, 0.3);
-  background-color: #dbdce4;
+  background-color: #f4fbff;
 }
 .ftr-cont .logo {
   display: flex;
@@ -117,7 +117,7 @@ header .dropdown-item:hover {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #dbdce4;
+  background-color: #f4fbff;
   position: fixed;
   top: 0;
   left: 0;
@@ -126,15 +126,18 @@ header .dropdown-item:hover {
   cursor: pointer;
 }
 .preloader .logo-preloader {
-  color: #1c1c1c;
   font-size: 200px;
   font-weight: bold;
   opacity: 0.1;
-  transition: opacity 1s ease-in, transform 1s ease-in;
+  animation: fadeIn 2s ease-in-out forwards;
 }
-.preloader .logo-preloader:hover {
-  opacity: 1;
-  transform: scale(1.02);
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .inicio {
@@ -163,11 +166,11 @@ header .dropdown-item:hover {
 h1 {
   text-align: center;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 a {
@@ -186,7 +189,7 @@ body {
 }
 
 .destacados-semana {
-  background-color: #dbdce4;
+  background-color: #f4fbff;
 }
 .destacados-semana .cont-destacados {
   display: flex;
@@ -261,7 +264,7 @@ body {
 
 .subsc-form input[type=email] {
   padding: 10px;
-  border: 1px solid #dbdce4;
+  border: 1px solid #f4fbff;
   border-radius: 30px;
   width: 350px;
   font-size: 1rem;
@@ -270,7 +273,7 @@ body {
   border: none;
   border-radius: 30px;
   background-color: #54a4b3;
-  color: #dbdce4;
+  color: #f4fbff;
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 15px;
@@ -290,7 +293,48 @@ body {
   margin: 0 auto;
 }
 .bloque-ult h1 {
-  color: #dbdce4;
+  color: #f4fbff;
+}
+.bloque-ult .bloque-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 25%);
+  gap: 2px;
+  padding-bottom: 20px;
+  height: 60rem;
+}
+.bloque-ult .bloque-2 .blo-recetas {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.bloque-ult .bloque-2 .blo-recetas:hover .receta-inf-rec {
+  opacity: 1;
+}
+.bloque-ult .bloque-2 .blo-recetas-h {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.bloque-ult .bloque-2 .blo-recetas-h:hover .receta-inf-rec {
+  opacity: 1;
+}
+.bloque-ult .bloque-2 .blo-recetas-coc {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.bloque-ult .bloque-2 .blo-recetas-coc:hover .receta-inf-rec {
+  opacity: 1;
+}
+.bloque-ult .bloque-2 .receta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.bloque-ult .bloque-2 .receta-img:hover {
+  transform: scale(1.1);
 }
 .bloque-ult .bloque {
   display: grid;
@@ -343,16 +387,19 @@ body {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  color: #dbdce4;
+  color: #f4fbff;
   padding: 10px;
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+.bloque-ult .receta-inf-rec p {
+  font-style: italic;
+}
 
 /* TEXTO PRESENTACION */
 .presentacion {
-  background-color: #54a4b3;
+  background-color: #f4fbff;
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 5%;
@@ -383,18 +430,19 @@ body {
 
 /* ------------------- NOSOTROS -------------- */
 .vision {
-  max-width: 70rem;
-  margin: 0 auto;
-  color: #dbdce4;
-  background-color: #54a4b3;
+  background-color: #f4fbff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .vision .vision-img {
-  height: 300px;
-  width: 100%;
+  height: 400px;
+  width: 50%;
   object-fit: cover;
 }
 .vision p {
-  font-size: 27px;
+  font-size: 2rem;
   padding-left: 5rem;
   padding-right: 5rem;
   padding-bottom: 2rem;
@@ -407,7 +455,7 @@ body {
   padding-right: 10%;
 }
 .bloque-colab h1 {
-  color: #dbdce4;
+  color: #f4fbff;
 }
 .bloque-colab .colaborador-c {
   display: flex;
@@ -418,7 +466,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px dotted #dbdce4;
+  border: 2px dotted #f4fbff;
   border-radius: 4px;
   padding: 2rem;
   margin-bottom: 10px;
@@ -433,12 +481,12 @@ body {
 }
 .bloque-colab .colaborador .colab-contenido,
 .bloque-colab .colaborador-c .colab-contenido {
-  color: #dbdce4;
+  color: #f4fbff;
 }
 
 /* -----------Edit HTML RESTAURANTES------------- */
 .resto-recome-cont {
-  background-color: #dbdce4;
+  background-color: #f4fbff;
 }
 .resto-recome-cont .carousel-item {
   height: 500px;
@@ -453,7 +501,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #dbdce4;
+  color: #f4fbff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   width: 30%;
   text-align: center;
@@ -462,7 +510,7 @@ body {
 
 /* Resto visita */
 .resto-recome-mp h1 {
-  color: #dbdce4;
+  color: #f4fbff;
 }
 .resto-recome-mp iframe {
   margin: 0 auto;
@@ -473,7 +521,7 @@ body {
 
 /* ESTILOS FORM CONTACTOS */
 .contact-cont {
-  background-color: #dbdce4;
+  background-color: #f4fbff;
   padding-bottom: 2rem;
 }
 .contact-cont .form-content {
@@ -512,7 +560,7 @@ body {
 .contact-cont .form-content .contact input[type=submit]:hover {
   transform: scale(1.05);
   background-color: #54a4b3;
-  color: #dbdce4;
+  color: #f4fbff;
 }
 .contact-cont .form-content .contact input:focus,
 .contact-cont .form-content .contact textarea:focus {
@@ -521,7 +569,7 @@ body {
 }
 .contact-cont .form-content .contact label {
   font-size: 25px;
-  color: #dbdce4;
+  color: #f4fbff;
 }
 
 /* ----------- DISEÑO DE RECETA ------------------ */
@@ -531,7 +579,7 @@ body {
   max-width: 80rem;
   margin: 0 auto;
   margin-bottom: 20px;
-  background-color: #dbdce4;
+  background-color: #f4fbff;
   border-radius: 4px;
 }
 .receta-completa .rece-img {
@@ -550,6 +598,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
   /* DESTACADOS */
   .destacados-semana .cont-destacados {
     display: grid;
@@ -588,14 +639,21 @@ body {
   .bloque-ult .bloque .blo-recetas.a3 {
     display: none;
   }
-  .pres-content {
+  .bloque-ult .receta-inf-rec {
+    opacity: 1;
+  }
+  .bloque-ult .bloque-2 {
+    grid-template-columns: repeat(3, 1fr);
+    height: 50rem;
+  }
+  .presentacion .pres-content {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .pres-content img {
+  .presentacion .pres-content .pres-info img {
     width: 80%;
   }
-  .pres-content h2 {
+  .presentacion .pres-content .pres-info h2 {
     font-size: 2rem;
   }
   /* NOSOTROS tablet */
@@ -640,17 +698,23 @@ body {
   }
 }
 @media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
   /* suscripcion */
   .subsc-form input[type=email] {
     width: 18rem;
   }
-  .pres-content img {
+  .presentacion .pres-content img {
     display: none;
   }
-  .pres-content h2 {
+  .presentacion .pres-content .pres-info h2 {
     font-size: 1.5rem;
   }
-  .pres-content h3 {
+  .presentacion .pres-content .pres-info h3 {
     font-size: 1.2rem;
   }
   /* recetas recientes  */
@@ -663,6 +727,9 @@ body {
   }
   .bloque-ult .bloque .blo-recetas.a1 {
     display: block;
+  }
+  .bloque-ult .bloque-2 {
+    grid-template-columns: repeat(2, 1fr);
   }
   /* NOSOTROS */
   .vision p {

@@ -1,5 +1,4 @@
 window.addEventListener("load", function() {
-    const preloader = document.getElementById("preloader");
     const contenido = document.getElementById("contenido");
 
     if (sessionStorage.getItem("preloaderShown")) {
