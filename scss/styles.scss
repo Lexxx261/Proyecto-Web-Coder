@@ -3,7 +3,6 @@
 @import "header";
 @import "footer";
 @import "mixins";
-@import "logo-pre";
 @import "globales";
 
 // Estilos general body
@@ -13,10 +12,6 @@ body {
     color: $negro;
 }
 
-.hidden {
-    display: none;
-}
-
 // Destacados semana
 .destacados-semana {
     background-color: $blanco;
@@ -24,6 +19,7 @@ body {
     .cont-destacados {
         @include flex-center;
         padding-bottom: 1rem;
+        overflow-x: hidden;
 
         .recetas {
             position: relative;
@@ -159,6 +155,7 @@ body {
                 opacity: 1;
             }
         }
+
         .receta-img {
             width: 100%;
             height: 100%;
@@ -516,6 +513,7 @@ body {
             opacity: 1;
 
         }
+
         .bloque-2 {
             grid-template-columns: repeat(3, 1fr);
             height: 50rem;
@@ -528,11 +526,11 @@ body {
             flex-direction: column-reverse;
             align-items: center;
 
-            .pres-info {
-                img {
-                    width: 80%;
-                }
+            img {
+                width: 70%;
+            }
 
+            .pres-info {
                 h2 {
                     font-size: 2rem;
                 }
@@ -655,6 +653,7 @@ body {
                 display: block;
             }
         }
+
         .bloque-2 {
             grid-template-columns: repeat(2, 1fr);
         }
