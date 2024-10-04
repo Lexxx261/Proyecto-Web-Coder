@@ -7,6 +7,28 @@
   padding: 0;
 }
 
+body {
+  background-color: #1c1c1c;
+  font-family: "Oswald", sans-serif;
+  color: #1c1c1c;
+}
+
+/* textos */
+h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   color: #f4fbff;
   width: 100%;
@@ -111,28 +133,6 @@ header .dropdown-item:hover {
     font-size: 3rem;
   }
 }
-/* textos */
-h1 {
-  text-align: center;
-  padding: 1rem;
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  background-color: #1c1c1c;
-  font-family: "Oswald", sans-serif;
-  color: #1c1c1c;
-}
-
 .destacados-semana {
   background-color: #f4fbff;
 }
@@ -397,6 +397,7 @@ body {
 
 /* COLABORADORES BLOQUE */
 .bloque-colab {
+  overflow-x: hidden;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -428,6 +429,31 @@ body {
 .bloque-colab .colaborador .colab-contenido,
 .bloque-colab .colaborador-c .colab-contenido {
   color: #f4fbff;
+}
+
+/* ----------- DISEÑO DE RECETA ------------------ */
+.receta-completa {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #f4fbff;
+  border-radius: 4px;
+}
+.receta-completa .rece-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+}
+.receta-completa .receta-ingreso {
+  margin: 2rem;
+}
+.receta-completa .receta-ingreso h2 {
+  font-size: 3rem;
 }
 
 /* -----------Edit HTML RESTAURANTES------------- */
@@ -518,31 +544,77 @@ body {
   color: #f4fbff;
 }
 
-/* ----------- DISEÑO DE RECETA ------------------ */
-.receta-completa {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 80rem;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background-color: #f4fbff;
-  border-radius: 4px;
+@media (max-width: 390px) {
+  header .logo {
+    font-size: 7rem;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  /* suscripcion */
+  .subsc-form input[type=email] {
+    width: 18rem;
+  }
+  .presentacion .pres-content img {
+    display: none;
+  }
+  .presentacion .pres-content .pres-info h2 {
+    font-size: 1.5rem;
+  }
+  .presentacion .pres-content .pres-info h3 {
+    font-size: 1.2rem;
+  }
+  /* recetas recientes  */
+  .bloque-ult .bloque {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(4, 10rem);
+  }
+  .bloque-ult .bloque-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(8, 10rem);
+    overflow: scroll;
+  }
+  /* NOSOTROS */
+  .vision p {
+    font-size: 18px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+  }
+  .bloque-colab .colaborador,
+  .bloque-colab .colaborador-c {
+    flex-direction: column;
+  }
+  .bloque-colab .colaborador .colab-img,
+  .bloque-colab .colaborador-c .colab-img {
+    width: 90%;
+    margin: 0;
+  }
+  /* restaurantes movil */
+  .mapsg iframe {
+    height: 300px;
+    padding-bottom: 1rem;
+  }
+  .contact-cont .form-content .form-img {
+    display: none;
+  }
+  .contact-cont .form-content .contact {
+    border-radius: 4px;
+    width: 100% !important;
+  }
+  /* RECETA */
+  .receta-completa {
+    flex-direction: column;
+  }
+  .receta-completa .rece-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
-.receta-completa .rece-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  margin-right: 20px;
-  padding-right: 20px;
-  border-radius: 4px;
-}
-.receta-completa .receta-ingreso {
-  margin: 2rem;
-}
-.receta-completa .receta-ingreso h2 {
-  font-size: 3rem;
-}
-
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -635,78 +707,6 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 80%;
-    flex-direction: column;
-  }
-  .receta-completa .rece-img {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  /* suscripcion */
-  .subsc-form input[type=email] {
-    width: 18rem;
-  }
-  .presentacion .pres-content img {
-    display: none;
-  }
-  .presentacion .pres-content .pres-info h2 {
-    font-size: 1.5rem;
-  }
-  .presentacion .pres-content .pres-info h3 {
-    font-size: 1.2rem;
-  }
-  /* recetas recientes  */
-  .bloque-ult .bloque {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .bloque-ult .bloque .blo-recetas-h,
-  .bloque-ult .bloque .blo-recetas-coc {
-    display: none;
-  }
-  .bloque-ult .bloque .blo-recetas.a1 {
-    display: block;
-  }
-  .bloque-ult .bloque-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  /* NOSOTROS */
-  .vision p {
-    font-size: 18px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-  }
-  .bloque-colab .colaborador,
-  .bloque-colab .colaborador-c {
-    flex-direction: column;
-  }
-  .bloque-colab .colaborador .colab-img,
-  .bloque-colab .colaborador-c .colab-img {
-    width: 90%;
-    margin: 0;
-  }
-  /* restaurantes movil */
-  .mapsg iframe {
-    height: 300px;
-    padding-bottom: 1rem;
-  }
-  .contact-cont .form-content .form-img {
-    display: none;
-  }
-  .contact-cont .form-content .contact {
-    border-radius: 4px;
-    width: 100%;
-  }
-  /* RECETA */
-  .receta-completa {
     flex-direction: column;
   }
   .receta-completa .rece-img {

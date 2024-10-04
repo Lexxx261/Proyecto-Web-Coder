@@ -1,0 +1,27 @@
+
+/* ----------- DISEÑO DE RECETA ------------------ */
+.receta-completa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: $blanco;
+    border-radius: 4px;
+
+    .rece-img {
+        @include img-fit;
+        margin-right: 20px;
+        padding-right: 20px;
+        border-radius: 4px;
+    }
+
+    .receta-ingreso {
+        margin: 2rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+}

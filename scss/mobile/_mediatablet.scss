@@ -1,0 +1,152 @@
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* DESTACADOS */
+    .destacados-semana {
+        .cont-destacados {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+
+            .recetas {
+                width: 100%;
+                height: 15rem;
+            }
+        }
+    }
+
+    /* SUSCRIPCION */
+    .subscript {
+        flex-direction: column;
+
+        .subsc-form {
+            display: flex;
+
+            .subsc-form input[type="email"] {
+                width: 25rem;
+            }
+
+            .mobile-butt {
+                display: block;
+            }
+
+            button {
+                width: 50px;
+
+                &.no-show {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* responsive recientes */
+    .bloque-ult {
+        .bloque {
+            grid-template-columns: repeat(3, 1fr);
+
+            .blo-recetas.a1,
+            .blo-recetas.a2,
+            .blo-recetas.a3 {
+                display: none;
+            }
+        }
+
+        .receta-inf-rec {
+            opacity: 1;
+
+        }
+
+        .bloque-2 {
+            grid-template-columns: repeat(3, 1fr);
+            height: 50rem;
+        }
+    }
+
+    // -------- PRESENTACION ------- 
+    .presentacion {
+        .pres-content {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            img {
+                width: 70%;
+            }
+
+            .pres-info {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    /* NOSOTROS tablet */
+    .vision {
+        p {
+            font-size: 23px;
+        }
+
+        .vision-img {
+            display: none;
+        }
+    }
+
+    // COLABORACIONES 
+    .bloque-colab {
+
+        .colaborador,
+        .colaborador-c {
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /* restaurante map */
+    .resto-recome-mp {
+        iframe {
+            height: 400px;
+            padding: 0;
+        }
+    }
+
+    .resto-recome-cont {
+        .carousel-item {
+            .carousel-descrip {
+                width: 60%;
+            }
+        }
+
+    }
+
+    /* formulario de contacto */
+    .contact-cont {
+        .form-content {
+            .form-img {
+                width: 20%;
+            }
+
+            .contact {
+                width: 60%;
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    /* RECETA */
+    .receta-completa {
+        @include flex-center;
+        max-width: 80%;
+        flex-direction: column;
+
+        .rece-img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}

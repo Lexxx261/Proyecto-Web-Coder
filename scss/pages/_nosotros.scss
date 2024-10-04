@@ -1,0 +1,58 @@
+/* ------------------- NOSOTROS -------------- */
+.vision {
+    background-color: $blanco;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .vision-img {
+        height: 400px;
+        width: 50%;
+        object-fit: cover;
+    }
+
+    p {
+        font-size: 2rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+/* COLABORADORES BLOQUE */
+.bloque-colab {
+    overflow-x: hidden;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h1 {
+        color: $blanco;
+    }
+
+    .colaborador-c {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .colaborador,
+    .colaborador-c {
+        @include flex-center;
+        @include borde-dot;
+        padding: 2rem;
+        margin-bottom: 10px;
+
+        .colab-img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .colab-contenido {
+            color: $blanco;
+        }
+    }
+}

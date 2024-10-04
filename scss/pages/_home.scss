@@ -1,0 +1,253 @@
+// Destacados semana
+.destacados-semana {
+    background-color: $blanco;
+
+    .cont-destacados {
+        @include flex-center;
+        padding-bottom: 1rem;
+        overflow-x: hidden;
+
+        .recetas {
+            position: relative;
+            width: 350px;
+            height: 500px;
+            overflow: hidden;
+            margin: 3px;
+
+
+            .receta-imagen {
+                border-radius: 4px;
+                transition: transform 0.3s ease;
+
+                &.a {
+                    background-image: url(../img/Empanadas.jpg);
+                    @include img-dest;
+                }
+
+                &.b {
+                    background-image: url(../img/mexicana.webp);
+                    @include img-dest;
+                }
+
+                &.c {
+                    background-image: url(../img/hamburguesa.png);
+                    @include img-dest;
+                }
+
+                &:hover {
+                    transform: scale(0.98);
+                }
+            }
+
+            .receta-info {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 4px;
+                width: 80%;
+                padding: 1rem;
+                text-align: center;
+
+                .receta-categoria {
+                    font-weight: 300;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+/* Estilos para la sección de suscripción */
+.subscript {
+    background-color: $grisazulado;
+    padding: 1.5rem;
+    text-align: center;
+    @include flex-center;
+
+    h2 {
+        color: $violeta;
+        padding-right: 1rem;
+    }
+}
+
+.subsc-form {
+    input[type="email"] {
+        padding: 10px;
+        border: 1px solid $blanco;
+        border-radius: 30px;
+        width: 350px;
+        font-size: 1rem;
+    }
+
+    button {
+        border: none;
+        border-radius: 30px;
+        background-color: $azulclaro;
+        color: $blanco;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 15px;
+        padding: 10px;
+        width: 150px;
+
+        &:hover {
+            background-color: $violeta;
+        }
+    }
+
+    .mobile-butt {
+        display: none;
+    }
+}
+
+/* Estilos para la sección de recetas recientes */
+.bloque-ult {
+    @include delimit;
+
+    h1 {
+        color: $blanco;
+    }
+
+    .bloque-2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 25%);
+        gap: 2px;
+        padding-bottom: 20px;
+        height: 60rem;
+
+        .blo-recetas {
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .blo-recetas-h {
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .blo-recetas-coc {
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .receta-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .bloque {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 33%);
+        gap: 2px;
+        padding-bottom: 20px;
+        height: 42rem;
+
+        .blo-recetas {
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .blo-recetas-h {
+            @include space-span;
+            @include pos-recent;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .blo-recetas-coc {
+            @include pos-recent;
+            @include space-span-reverse;
+
+            &:hover .receta-inf-rec {
+                opacity: 1;
+            }
+        }
+
+        .receta-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .receta-inf-rec {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $blanco;
+        padding: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        p {
+            font-style: italic;
+        }
+    }
+}
+
+/* TEXTO PRESENTACION */
+.presentacion {
+    background-color: $blanco;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .pres-content {
+        @include flex-center;
+        border: 2px dotted $negro;
+        border-radius: 4px;
+        padding: 10px;
+
+        img {
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .pres-info {
+            text-align: center;
+            padding: 10px;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
