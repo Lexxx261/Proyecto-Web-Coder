@@ -633,6 +633,9 @@ header .dropdown-item:hover {
   .subscript {
     flex-direction: column;
   }
+  .subscript h2 {
+    font-size: 1.3rem;
+  }
   .subscript .subsc-form {
     display: flex;
   }
@@ -650,7 +653,7 @@ header .dropdown-item:hover {
   }
   /* responsive recientes */
   .bloque-ult .bloque {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .bloque-ult .bloque .blo-recetas.a1,
   .bloque-ult .bloque .blo-recetas.a2,
@@ -661,7 +664,7 @@ header .dropdown-item:hover {
     opacity: 1;
   }
   .bloque-ult .bloque-2 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     height: 50rem;
   }
   .presentacion .pres-content {
@@ -681,9 +684,18 @@ header .dropdown-item:hover {
   .vision .vision-img {
     display: none;
   }
+  .bloque-colab .colaborador,
+  .bloque-colab .colaborador-c {
+    flex-direction: column;
+  }
   .bloque-colab .colaborador h2,
   .bloque-colab .colaborador-c h2 {
     font-size: 20px;
+  }
+  .bloque-colab .colaborador .colab-img,
+  .bloque-colab .colaborador-c .colab-img {
+    width: 100%;
+    padding-bottom: 1rem;
   }
   /* restaurante map */
   .resto-recome-mp iframe {
@@ -698,7 +710,7 @@ header .dropdown-item:hover {
     width: 20%;
   }
   .contact-cont .form-content .contact {
-    width: 60%;
+    width: 70%;
     padding: 1.5rem;
   }
   /* RECETA */

@@ -20,7 +20,9 @@
     /* SUSCRIPCION */
     .subscript {
         flex-direction: column;
-
+h2{
+    font-size: 1.3rem;
+}
         .subsc-form {
             display: flex;
 
@@ -45,7 +47,7 @@
     /* responsive recientes */
     .bloque-ult {
         .bloque {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
             .blo-recetas.a1,
             .blo-recetas.a2,
@@ -60,7 +62,7 @@
         }
 
         .bloque-2 {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             height: 50rem;
         }
     }
@@ -102,6 +104,11 @@
             h2 {
                 font-size: 20px;
             }
+            flex-direction: column;
+            .colab-img{
+                width: 100%;
+                padding-bottom: 1rem;
+            }
         }
     }
 
@@ -130,7 +137,7 @@
             }
 
             .contact {
-                width: 60%;
+                width: 70%;
                 padding: 1.5rem;
             }
         }
